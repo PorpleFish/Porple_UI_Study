@@ -15,10 +15,19 @@ run/main_scene="uid://vrpoy4ysua3i"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://cqeruxy4g24n6"
+
+[autoload]
+
+Enums="*uid://bc7p2dp4xrcx1"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/per_pixel_transparency/allowed=true
 
 [dotnet]
 

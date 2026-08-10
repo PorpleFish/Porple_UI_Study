@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://vrpoy4ysua3i"]
 
+[ext_resource type="Script" uid="uid://cxwh6ufb82ru3" path="res://Effects/First_Highlight_Effect.gd" id="1_y5vr1"]
+[ext_resource type="Script" uid="uid://pedwhlvlyyo1" path="res://Effects/Button_Sound_Effect.gd" id="2_qwosb"]
+[ext_resource type="AudioStream" uid="uid://ceycu6ysag4o4" path="res://Audio/Kenney_UI_Audio/rollover4.ogg" id="3_0bd38"]
+[ext_resource type="AudioStream" uid="uid://dxlfma41phmul" path="res://Audio/Kenney_UI_Audio/switch1.ogg" id="4_fslae"]
+
 [node name="Main_Menu" type="Control" unique_id=1787122051]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +12,116 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TL" type="Button" parent="." unique_id=450311390]
+layout_mode = 1
+offset_right = 71.0
+offset_bottom = 31.0
+focus_neighbor_left = NodePath("../TR")
+text = "Top Left
+"
+
+[node name="First_Highlight_Effect" type="Node" parent="TL" unique_id=1456480641]
+script = ExtResource("1_y5vr1")
+
+[node name="Button_Sound_Effect" type="Node" parent="TL" unique_id=318093709]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")
+
+[node name="TM" type="Button" parent="." unique_id=1293066861]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.5
+offset_right = 35.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Top Mid
+
+
+"
+
+[node name="Button_Sound_Effect" type="Node" parent="TM" unique_id=913518617]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")
+
+[node name="TR" type="Button" parent="." unique_id=244324110]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -81.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Top Right
+
+
+"
+
+[node name="Button_Sound_Effect" type="Node" parent="TR" unique_id=728980839]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")
+
+[node name="BL" type="Button" parent="." unique_id=2106122579]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 69.0
+grow_vertical = 0
+text = "Bot Left
+
+
+"
+
+[node name="Button_Sound_Effect" type="Node" parent="BL" unique_id=808985640]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")
+
+[node name="BM" type="Button" parent="." unique_id=292135487]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -31.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Bot Mid
+"
+
+[node name="Button_Sound_Effect" type="Node" parent="BM" unique_id=1432403455]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")
+
+[node name="BR" type="Button" parent="." unique_id=1739480461]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -79.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Bot Right
+
+
+
+"
+
+[node name="Button_Sound_Effect" type="Node" parent="BR" unique_id=665542559]
+script = ExtResource("2_qwosb")
+hover = ExtResource("3_0bd38")
+button_down = ExtResource("4_fslae")

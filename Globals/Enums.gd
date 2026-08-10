@@ -1,0 +1,10 @@
+extends Node
+
+enum SOUND_TYPE {
+	HOVER,
+	UNHOVER,
+	BUTTON_DOWN,
+	BUTTON_UP,
+	CHECK,
+	UNCHECK,
+}

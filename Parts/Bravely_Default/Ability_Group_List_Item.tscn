@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cxx3dmnj86ndy"]
+
+[ext_resource type="Script" uid="uid://5sl4s3nifbor" path="res://Parts/Bravely_Default/Ability_Group_List_Item.gd" id="1_nqcic"]
+[ext_resource type="Texture2D" uid="uid://d33mqot0nxhyi" path="res://Sprites/nineslice/NS_Ability_item_background.png" id="3_ghrv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_325mi"]
+
+[sub_resource type="Gradient" id="Gradient_wolhu"]
+offsets = PackedFloat32Array(0.6634747, 1)
+colors = PackedColorArray(0.6745098, 0.64705884, 0.60784316, 1, 0.6745098, 0.64705884, 0.60784316, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wolhu"]
+gradient = SubResource("Gradient_wolhu")
+
+[node name="Ability_Group_List_Item" type="HBoxContainer" unique_id=1372021645]
+offset_right = 550.0
+offset_bottom = 47.0
+script = ExtResource("1_nqcic")
+
+[node name="Cursor_Location_Box" type="CenterContainer" parent="." unique_id=916475202]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+
+[node name="Cursor_Location" type="Control" parent="Cursor_Location_Box" unique_id=591092552]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=346202007]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_325mi")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer" unique_id=1514019861]
+clip_children = 1
+texture_filter = 1
+clip_contents = true
+layout_mode = 2
+offset_transform_scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ghrv1")
+patch_margin_left = 32
+patch_margin_top = 14
+patch_margin_bottom = 14
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/NinePatchRect" unique_id=1674902606]
+layout_mode = 0
+offset_right = 501.0
+offset_bottom = 64.0
+texture = SubResource("GradientTexture1D_wolhu")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1647003907]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2051766208]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=140081335]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Icon" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1990754047]
+layout_mode = 2
+
+[node name="Ability_Name" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=133001575]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Black_Magic"
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=937176420]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 300

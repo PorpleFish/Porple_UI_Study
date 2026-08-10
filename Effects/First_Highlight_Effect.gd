@@ -1,3 +1,4 @@
+@icon("res://Addons/at-icons/node/flag_triangular.svg")
 class_name First_Highlight_Effect
 extends Node
 

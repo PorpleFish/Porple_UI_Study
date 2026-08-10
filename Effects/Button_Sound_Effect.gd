@@ -1,3 +1,4 @@
+@icon("res://Addons/at-icons/node/speaker.svg")
 class_name Button_Sound_Effect
 extends Node
 

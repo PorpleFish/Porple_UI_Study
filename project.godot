@@ -33,6 +33,20 @@ window/per_pixel_transparency/allowed=true
 
 project/assembly_name="Porple_UI_Study"
 
+[file_customization]
+
+folder_colors={
+"res://Addons/": "red",
+"res://Audio/": "purple",
+"res://Effects/": "green",
+"res://Globals/": "blue",
+"res://Parts/": "green",
+"res://Screens/": "green",
+"res://Sprites/": "purple",
+"res://Sprites/Icon/": "teal",
+"res://Sprites/Input_Prompts/": "teal"
+}
+
 [input]
 
 ui_accept={

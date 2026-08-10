@@ -8,6 +8,7 @@ extends VBoxContainer
 			print("<ABILITY_LIST> Applying offset!")
 		offset_scale = value
 
+@export var offset_curve : Curve
 
 func apply_offset() -> void:
 	var amount = get_child_count() + 1 as float
@@ -16,9 +17,13 @@ func apply_offset() -> void:
 		var offset: float
 		
 		if float(i) < mid_point:
-			offset = lerp(0, 1, float(i) / mid_point)
+			offset = lerp(
+				0.0, 
+				1.0, 
+				offset_curve.sample((float(i) / mid_point))
+			)
 		else:
-			offset = lerp(1, 0, (float(i) - mid_point) / mid_point)
+			offset = lerp(1, 0, ((float(i) - mid_point) / mid_point) * ((float(i) - mid_point) / mid_point))
 		
 		var item = get_child(i - 1) as Control
 		if item:

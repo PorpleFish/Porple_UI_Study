@@ -27,10 +27,6 @@ gradient = SubResource("Gradient_o1by2")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqjmn"]
 texture = SubResource("GradientTexture1D_e2vry")
 
-[sub_resource type="Curve" id="Curve_d7na3"]
-_data = [Vector2(0, 0), 0.0, 3.428115, 0, 0, Vector2(0.29411766, 0.6134969), 1.0640217, 1.0640217, 0, 0, Vector2(0.9940696, 1), 0.041378926, 0.0, 0, 0]
-point_count = 3
-
 [sub_resource type="Gradient" id="Gradient_v47lo"]
 offsets = PackedFloat32Array(0, 0.9437964, 0.9512195, 0.990456, 1)
 colors = PackedColorArray(0.78431374, 0.7529412, 0.7019608, 1, 0.78431374, 0.7529412, 0.7019608, 1, 0.26845786, 0.11152347, 0.060017824, 1, 0.26845786, 0.11152347, 0.060017824, 1, 0.26666668, 0.10980392, 0.05882353, 0)
@@ -41,7 +37,6 @@ fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_astpc"]
-content_margin_left = 22.0
 texture = SubResource("GradientTexture2D_d7na3")
 
 [node name="Abilities_Screen" type="VBoxContainer" unique_id=268996428]
@@ -175,41 +170,45 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/separation = 8
 script = ExtResource("3_v47lo")
-offset_scale = -85.0
-offset_curve = SubResource("Curve_d7na3")
+offset_scale = -30.865
 
 [node name="Ability_Group_List_Item_01" parent="Commands/Ability_List_Panel/List" unique_id=1372021645 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-47.656902, 0)
-focus_neighbor_top = NodePath("../Ability_Group_List_Item_07")
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7.66875, 0)
 
 [node name="Ability_Group_List_Item_02" parent="Commands/Ability_List_Panel/List" unique_id=634149479 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-68.01703, 0)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-15.3375, 0)
 
 [node name="Ability_Group_List_Item_03" parent="Commands/Ability_List_Panel/List" unique_id=2050314306 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-80.31873, 0)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-23.00625, 0)
 
 [node name="Ability_Group_List_Item_04" parent="Commands/Ability_List_Panel/List" unique_id=1714396330 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-84.86, 0)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-30.675, 0)
 
 [node name="First_Highlight_Effect" type="Node" parent="Commands/Ability_List_Panel/List/Ability_Group_List_Item_04" unique_id=69603917]
 script = ExtResource("5_d7na3")
 
 [node name="Ability_Group_List_Item_05" parent="Commands/Ability_List_Panel/List" unique_id=1971352857 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-79.55625, 0)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-23.00625, 0)
 
 [node name="Ability_Group_List_Item_06" parent="Commands/Ability_List_Panel/List" unique_id=1692516211 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-63.645, 0)
+offset_transform_enabled = true
+offset_transform_position = Vector2(-15.3375, 0)
 
 [node name="Ability_Group_List_Item_07" parent="Commands/Ability_List_Panel/List" unique_id=1590258769 instance=ExtResource("3_astpc")]
 layout_mode = 2
-offset_transform_position = Vector2(-37.12625, 0)
-focus_neighbor_bottom = NodePath("../Ability_Group_List_Item_01")
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7.66875, 0)
 
 [node name="Tooltip_Container" type="PanelContainer" parent="." unique_id=947432249]
 custom_minimum_size = Vector2(0, 64)
@@ -221,7 +220,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_astpc")
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0.26666668, 0.015686275, 0.019607844, 1)
-theme_override_font_sizes/font_size = 26
 text = "Use level 1 black magic."
 vertical_alignment = 1
 autowrap_mode = 2

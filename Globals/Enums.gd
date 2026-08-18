@@ -8,3 +8,10 @@ enum SOUND_TYPE {
 	CHECK,
 	UNCHECK,
 }
+
+enum DIRECTION {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}

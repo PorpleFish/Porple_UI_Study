@@ -25,6 +25,8 @@ Enums="*uid://bc7p2dp4xrcx1"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/per_pixel_transparency/allowed=true
@@ -43,8 +45,9 @@ folder_colors={
 "res://Parts/": "green",
 "res://Screens/": "green",
 "res://Sprites/": "purple",
-"res://Sprites/Icon/": "teal",
-"res://Sprites/Input_Prompts/": "teal"
+"res://Sprites/Icon/": "purple",
+"res://Sprites/Input_Prompts/": "purple",
+"res://Sprites/nineslice/": "purple"
 }
 
 [input]
@@ -76,6 +79,7 @@ ui_close_dialog={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

@@ -2,8 +2,8 @@
 class_name List_Item_Sound_Effect
 extends Node
 
-# Effect for reactive sounds on button interactions
 # 
+# Effect for reactive sounds on button interactions
 # 
 
 signal sound_finished(sound : Enums.SOUND_TYPE)

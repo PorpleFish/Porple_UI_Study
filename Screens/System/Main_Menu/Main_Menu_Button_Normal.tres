@@ -1,0 +1,17 @@
+[gd_resource type="StyleBoxTexture" script_class="StyleBoxTexturedCustomSize" format=3 uid="uid://hsvp6g57xtea"]
+
+[ext_resource type="Script" uid="uid://bssxbvp32isv5" path="res://Style_Boxes/Custom_Classes/StyleBoxTexturedCustomSize.gd" id="1_5ul72"]
+[ext_resource type="Texture2D" uid="uid://d33mqot0nxhyi" path="res://Sprites/nineslice/NS_Ability_item_background.png" id="2_hq70c"]
+
+[resource]
+texture = ExtResource("2_hq70c")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0
+expand_margin_top = -12.0
+expand_margin_bottom = -12.0
+script = ExtResource("1_5ul72")
+hacked_border_margin_top = -12.0
+hacked_border_margin_bottom = -12.0
+metadata/_custom_type_script = "uid://bssxbvp32isv5"

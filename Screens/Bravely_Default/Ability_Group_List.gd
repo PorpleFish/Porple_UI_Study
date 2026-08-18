@@ -5,7 +5,6 @@ extends VBoxContainer
 	set(value):
 		if Engine.is_editor_hint():
 			apply_offset()
-			print("<ABILITY_LIST> Applying offset!")
 		offset_scale = value
 
 @export var offset_curve : Curve

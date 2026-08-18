@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://vrpoy4ysua3i"]
 
-[ext_resource type="Script" uid="uid://h3ceps4axoak" path="res://Screens/System/main_menu.gd" id="1_qwosb"]
+[ext_resource type="Script" uid="uid://h3ceps4axoak" path="res://Screens/System/Main_Menu/main_menu.gd" id="1_qwosb"]
 [ext_resource type="Script" uid="uid://cxwh6ufb82ru3" path="res://Effects/First_Highlight_Effect.gd" id="1_y5vr1"]
+[ext_resource type="Theme" uid="uid://do570vuyc0p5v" path="res://Themes/System.tres" id="2_0bd38"]
 [ext_resource type="Script" uid="uid://pedwhlvlyyo1" path="res://Effects/Button_Sound_Effect.gd" id="2_qwosb"]
 [ext_resource type="AudioStream" uid="uid://ceycu6ysag4o4" path="res://Audio/Kenney_UI_Audio/rollover4.ogg" id="3_0bd38"]
 [ext_resource type="AudioStream" uid="uid://dxlfma41phmul" path="res://Audio/Kenney_UI_Audio/switch1.ogg" id="4_fslae"]
@@ -32,7 +33,9 @@ theme_override_font_sizes/font_size = 24
 text = "Porples' UI Studies"
 
 [node name="Start" type="Button" parent="Menu_Container" unique_id=1310917210]
+texture_filter = 1
 layout_mode = 2
+theme = ExtResource("2_0bd38")
 text = "Start"
 alignment = 0
 

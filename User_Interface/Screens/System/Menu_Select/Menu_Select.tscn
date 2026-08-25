@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://crfv280l83m1r"]
+
+[ext_resource type="Theme" uid="uid://dggx0kufn6oal" path="res://User_Interface/Screens/System/Menu_Select/Menu_Select.tres" id="1_bimf7"]
+[ext_resource type="PackedScene" uid="uid://2qoux2t3mcbw" path="res://User_Interface/Screens/System/Menu_Select/menu_scene_button.tscn" id="1_shgcg"]
+[ext_resource type="Script" uid="uid://cxwh6ufb82ru3" path="res://User_Interface/Effects/First_Highlight_Effect.gd" id="3_106i1"]
+[ext_resource type="Script" uid="uid://do5yor2h0knce" path="res://User_Interface/Effects/Level_Opener_Effect.gd" id="3_t0q0m"]
+
+[node name="Menu_Select" type="VBoxContainer" unique_id=1636258535]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="." unique_id=605334251]
+layout_mode = 2
+theme = ExtResource("1_bimf7")
+text = "Menu Select"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1077487747]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=646022261]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer" unique_id=724709690]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="Menu Scene Button" parent="MarginContainer/HBoxContainer/GridContainer" unique_id=1965440316 instance=ExtResource("1_shgcg")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="First_Highlight_Effect" type="Node" parent="MarginContainer/HBoxContainer/GridContainer/Menu Scene Button" unique_id=1705981050]
+script = ExtResource("3_106i1")
+
+[node name="Menu Scene Button2" parent="MarginContainer/HBoxContainer/GridContainer" unique_id=606597614 instance=ExtResource("1_shgcg")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Menu Scene Button3" parent="MarginContainer/HBoxContainer/GridContainer" unique_id=1440558004 instance=ExtResource("1_shgcg")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Menu Scene Button4" parent="MarginContainer/HBoxContainer/GridContainer" unique_id=602393785 instance=ExtResource("1_shgcg")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Menu Scene Button5" parent="MarginContainer/HBoxContainer/GridContainer" unique_id=2003070293 instance=ExtResource("1_shgcg")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Description" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2134016194]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Hovered_Scene_Label" type="Label" parent="MarginContainer/HBoxContainer/Description" unique_id=1005155973]
+layout_mode = 2
+text = "<LEVEL NAME>"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/Description" unique_id=1619912061]
+layout_mode = 2
+
+[node name="Hovered_Scene_Label2" type="Label" parent="MarginContainer/HBoxContainer/Description" unique_id=1856068906]
+layout_mode = 2
+text = "<LEVEL DESCRIPTION>"
+
+[node name="Open_Level" type="Button" parent="MarginContainer/HBoxContainer/Description" unique_id=686761694]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 10
+text = "Open Level
+"
+
+[node name="Level_Opener_Effect" type="Node" parent="MarginContainer/HBoxContainer/Description/Open_Level" unique_id=948696858]
+script = ExtResource("3_t0q0m")
+
+[node name="Bottom_Buttons" type="HBoxContainer" parent="." unique_id=594240370]
+layout_mode = 2
+
+[node name="Quit_To_Main_Menu" type="Button" parent="Bottom_Buttons" unique_id=1124769883]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Quit to Main Menu"
+
+[node name="Level_Opener_Effect" type="Node" parent="Bottom_Buttons/Quit_To_Main_Menu" unique_id=323790819]
+script = ExtResource("3_t0q0m")

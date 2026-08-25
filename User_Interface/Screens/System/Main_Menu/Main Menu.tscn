@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://vrpoy4ysua3i"]
+
+[ext_resource type="Script" uid="uid://h3ceps4axoak" path="res://User_Interface/Screens/System/Main_Menu/main_menu.gd" id="1_tb1wv"]
+[ext_resource type="Theme" uid="uid://do570vuyc0p5v" path="res://User_Interface/Screens/System/Main_Menu/Main_Menu.tres" id="2_oi5bm"]
+[ext_resource type="Script" uid="uid://cxwh6ufb82ru3" path="res://User_Interface/Effects/First_Highlight_Effect.gd" id="3_gt5vh"]
+[ext_resource type="Script" uid="uid://pedwhlvlyyo1" path="res://User_Interface/Effects/Button_Sound_Effect.gd" id="4_wifnl"]
+[ext_resource type="AudioStream" uid="uid://ceycu6ysag4o4" path="res://Assets/Audio/Kenney_UI_Audio/rollover4.ogg" id="5_ewlw1"]
+[ext_resource type="AudioStream" uid="uid://dxlfma41phmul" path="res://Assets/Audio/Kenney_UI_Audio/switch1.ogg" id="6_pkcbr"]
+[ext_resource type="Script" uid="uid://do5yor2h0knce" path="res://User_Interface/Effects/Level_Opener_Effect.gd" id="7_kx1xv"]
+
+[node name="Main_Menu" type="Control" unique_id=1787122051]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tb1wv")
+
+[node name="Menu_Container" type="VBoxContainer" parent="." unique_id=3378365]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 84.0
+offset_right = 463.0
+offset_bottom = -190.0
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Menu_Container" unique_id=532628927]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Porples' UI Studies"
+
+[node name="Start" type="Button" parent="Menu_Container" unique_id=1310917210]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_oi5bm")
+text = "Start"
+alignment = 0
+
+[node name="First_Highlight_Effect" type="Node" parent="Menu_Container/Start" unique_id=1456480641]
+script = ExtResource("3_gt5vh")
+
+[node name="Button_Sound_Effect" type="Node" parent="Menu_Container/Start" unique_id=318093709]
+script = ExtResource("4_wifnl")
+hover = ExtResource("5_ewlw1")
+button_down = ExtResource("6_pkcbr")
+
+[node name="Level_Opener_Effect" type="Node" parent="Menu_Container/Start" unique_id=1740087794]
+script = ExtResource("7_kx1xv")
+level = "res://User_Interface/Screens/System/Menu_Select/Menu_Select.tscn"
+
+[node name="Settings" type="Button" parent="Menu_Container" unique_id=2067250352]
+layout_mode = 2
+theme = ExtResource("2_oi5bm")
+text = "Settings"
+alignment = 0
+
+[node name="Button_Sound_Effect" type="Node" parent="Menu_Container/Settings" unique_id=1108725070]
+script = ExtResource("4_wifnl")
+hover = ExtResource("5_ewlw1")
+button_down = ExtResource("6_pkcbr")
+
+[node name="Quit" type="Button" parent="Menu_Container" unique_id=1364757948]
+layout_mode = 2
+theme = ExtResource("2_oi5bm")
+text = "Quit"
+alignment = 0
+
+[node name="Button_Sound_Effect" type="Node" parent="Menu_Container/Quit" unique_id=831441461]
+script = ExtResource("4_wifnl")
+hover = ExtResource("5_ewlw1")
+button_down = ExtResource("6_pkcbr")
+
+[connection signal="pressed" from="Menu_Container/Quit" to="." method="_quit_game"]

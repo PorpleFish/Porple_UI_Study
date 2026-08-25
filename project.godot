@@ -39,15 +39,19 @@ project/assembly_name="Porple_UI_Study"
 
 folder_colors={
 "res://Addons/": "red",
-"res://Audio/": "purple",
-"res://Effects/": "green",
+"res://Assets/": "purple",
+"res://Assets/Audio/": "purple",
+"res://Assets/Sprites/": "purple",
+"res://Assets/Sprites/Icon/": "purple",
+"res://Assets/Sprites/Input_Prompts/": "purple",
+"res://Assets/Sprites/nineslice/": "purple",
 "res://Globals/": "blue",
-"res://Parts/": "green",
-"res://Screens/": "green",
-"res://Sprites/": "purple",
-"res://Sprites/Icon/": "purple",
-"res://Sprites/Input_Prompts/": "purple",
-"res://Sprites/nineslice/": "purple"
+"res://User_Interface/": "green",
+"res://User_Interface/Effects/": "green",
+"res://User_Interface/Parts/": "green",
+"res://User_Interface/Screens/": "green",
+"res://User_Interface/Style_Boxes/": "green",
+"res://User_Interface/Style_Boxes/Custom_Classes/": "green"
 }
 
 [input]

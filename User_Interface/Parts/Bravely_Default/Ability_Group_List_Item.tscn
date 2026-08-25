@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cxx3dmnj86ndy"]
+
+[ext_resource type="Theme" uid="uid://1bqfo4fh0r7a" path="res://User_Interface/Screens/Bravely_Default/Bravely Default.tres" id="1_kr2p6"]
+[ext_resource type="Script" uid="uid://5sl4s3nifbor" path="res://User_Interface/Parts/Bravely_Default/Ability_Group_List_Item.gd" id="1_ug32a"]
+[ext_resource type="Texture2D" uid="uid://b88r5mt1yq8o6" path="res://Addons/at-icons/mesh/axe.svg" id="2_kr2p6"]
+[ext_resource type="Script" uid="uid://beacak2133lht" path="res://User_Interface/Effects/List_Item_Sound_Effect.gd" id="2_ra1w3"]
+[ext_resource type="AudioStream" uid="uid://djk1w4oghvox1" path="res://Assets/Audio/Kenney_UI_Audio/click4.ogg" id="3_kr2p6"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kr2p6"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+color = Color(0.5, 0.5, 0.5, 0)
+vertical = true
+
+[node name="Ability_Group_List_Item" type="Button" unique_id=1319178338]
+texture_filter = 1
+custom_minimum_size = Vector2(512, 58)
+offset_left = -0.11
+offset_right = 636.89
+offset_bottom = 58.0
+offset_transform_enabled = true
+theme = ExtResource("1_kr2p6")
+script = ExtResource("1_ug32a")
+
+[node name="Icon_And_Text" type="HBoxContainer" parent="." unique_id=85610591]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSeparator" type="VSeparator" parent="Icon_And_Text" unique_id=304317182]
+layout_mode = 2
+theme_override_constants/separation = 21
+theme_override_styles/separator = SubResource("StyleBoxLine_kr2p6")
+
+[node name="Icon_Container" type="CenterContainer" parent="Icon_And_Text" unique_id=1574210685]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Icon_And_Text/Icon_Container" unique_id=1990754047]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_kr2p6")
+stretch_mode = 2
+
+[node name="Ability_Name" type="Label" parent="Icon_And_Text" unique_id=133001575]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Black_Magic"
+
+[node name="List_Item_Sound_Effect" type="Node" parent="." unique_id=1527791232]
+script = ExtResource("2_ra1w3")
+hover = ExtResource("3_kr2p6")
+
+[connection signal="focus_entered" from="." to="." method="_focus"]
+[connection signal="focus_exited" from="." to="." method="_unfocus"]

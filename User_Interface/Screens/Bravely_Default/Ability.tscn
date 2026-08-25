@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://q0x8x0rcxkb5"]
+
+[ext_resource type="Texture2D" uid="uid://cosen7h5mb5qr" path="res://icon.svg" id="1_4scho"]
+[ext_resource type="Texture2D" uid="uid://c40uoscqdusql" path="res://Assets/Sprites/Input_Prompts/SS_Input_Pixel.png" id="1_o1by2"]
+[ext_resource type="PackedScene" uid="uid://cxx3dmnj86ndy" path="res://User_Interface/Parts/Bravely_Default/Ability_Group_List_Item.tscn" id="3_astpc"]
+[ext_resource type="Script" uid="uid://bijwfug13xhia" path="res://User_Interface/Screens/Bravely_Default/Ability_Group_List.gd" id="3_v47lo"]
+[ext_resource type="Script" uid="uid://cxwh6ufb82ru3" path="res://User_Interface/Effects/First_Highlight_Effect.gd" id="5_d7na3"]
+
+[sub_resource type="Gradient" id="Gradient_astpc"]
+offsets = PackedFloat32Array(0, 0.13573702, 1)
+colors = PackedColorArray(0.8039216, 0.74509805, 0.62352943, 0, 0.8039216, 0.74509805, 0.62352943, 1, 0.8039216, 0.74509805, 0.62352943, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d7na3"]
+gradient = SubResource("Gradient_astpc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v47lo"]
+texture = SubResource("GradientTexture1D_d7na3")
+
+[sub_resource type="Gradient" id="Gradient_o1by2"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.3204047, 0.6627319)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.3137255)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e2vry"]
+gradient = SubResource("Gradient_o1by2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqjmn"]
+texture = SubResource("GradientTexture1D_e2vry")
+
+[sub_resource type="Curve" id="Curve_d7na3"]
+_data = [Vector2(0, 0.019543886), 0.0, 2.4319394, 0, 0, Vector2(0.48531953, 0.7296416), 1.0526475, 1.0526475, 0, 0, Vector2(1, 1), 0.65432554, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_v47lo"]
+offsets = PackedFloat32Array(0, 0.9437964, 0.9512195, 0.990456, 1)
+colors = PackedColorArray(0.78431374, 0.7529412, 0.7019608, 1, 0.78431374, 0.7529412, 0.7019608, 1, 0.26845786, 0.11152347, 0.060017824, 1, 0.26845786, 0.11152347, 0.060017824, 1, 0.26666668, 0.10980392, 0.05882353, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d7na3"]
+gradient = SubResource("Gradient_v47lo")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_astpc"]
+content_margin_left = 22.0
+texture = SubResource("GradientTexture2D_d7na3")
+
+[node name="Abilities_Screen" type="VBoxContainer" unique_id=268996428]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Scene_Title_And_Character" type="HBoxContainer" parent="." unique_id=64805076]
+layout_mode = 2
+
+[node name="PanelContainer2" type="CenterContainer" parent="Scene_Title_And_Character" unique_id=845776200]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scene_Title_And_Character/PanelContainer2" unique_id=497673712]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0.26666668, 0.015686275, 0.019607844, 1)
+theme_override_colors/font_outline_color = Color(0.98039216, 1, 0.9843137, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 36
+text = "Ability"
+
+[node name="PanelContainer" type="PanelContainer" parent="Scene_Title_And_Character" unique_id=762167188]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_v47lo")
+
+[node name="Character_Selection" type="HBoxContainer" parent="Scene_Title_And_Character/PanelContainer" unique_id=1789298702]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="L_Bumper_Container" type="MarginContainer" parent="Scene_Title_And_Character/PanelContainer/Character_Selection" unique_id=1963498502]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 16
+
+[node name="L_Bumper_Locator" type="Control" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/L_Bumper_Container" unique_id=928454261]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="L_Bumper_Sprite" type="Sprite2D" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/L_Bumper_Container/L_Bumper_Locator" unique_id=1421857938]
+texture_filter = 1
+position = Vector2(-1, -1)
+scale = Vector2(3, 3)
+texture = ExtResource("1_o1by2")
+hframes = 34
+vframes = 24
+frame = 627
+
+[node name="Character portrait" type="TextureRect" parent="Scene_Title_And_Character/PanelContainer/Character_Selection" unique_id=515446737]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_4scho")
+
+[node name="Name_And_Stat" type="GridContainer" parent="Scene_Title_And_Character/PanelContainer/Character_Selection" unique_id=2059161129]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+columns = 2
+
+[node name="Character_Level" type="Label" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/Name_And_Stat" unique_id=2023012420]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Lv 9"
+
+[node name="Job_Level" type="Label" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/Name_And_Stat" unique_id=1579269254]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 32
+text = "Lv 2"
+
+[node name="Character_Name" type="Label" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/Name_And_Stat" unique_id=307578347]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 32
+text = "Tiz"
+
+[node name="Job_Name" type="Label" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/Name_And_Stat" unique_id=1879067862]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 32
+text = "Monk"
+
+[node name="R_Bumper_Container" type="MarginContainer" parent="Scene_Title_And_Character/PanelContainer/Character_Selection" unique_id=372818310]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="R_Bumper_Locator" type="Control" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/R_Bumper_Container" unique_id=1230904037]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="R_Bumper_Sprite" type="Sprite2D" parent="Scene_Title_And_Character/PanelContainer/Character_Selection/R_Bumper_Container/R_Bumper_Locator" unique_id=1414652397]
+texture_filter = 1
+position = Vector2(-1, -2)
+scale = Vector2(3, 3)
+texture = ExtResource("1_o1by2")
+hframes = 34
+vframes = 24
+frame = 628
+
+[node name="Commands" type="HBoxContainer" parent="." unique_id=1429548430]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Selected" type="VBoxContainer" parent="Commands" unique_id=171703961]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ability_List_Panel" type="PanelContainer" parent="Commands" unique_id=818397946]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_yqjmn")
+
+[node name="List" type="VBoxContainer" parent="Commands/Ability_List_Panel" unique_id=1169391111]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+script = ExtResource("3_v47lo")
+offset_scale = -231.985
+offset_curve = SubResource("Curve_d7na3")
+
+[node name="Ability_Group_List_Item_02" parent="Commands/Ability_List_Panel/List" unique_id=634149479 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-75.999565, 0)
+
+[node name="Ability_Group_List_Item_03" parent="Commands/Ability_List_Panel/List" unique_id=2050314306 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-124.94498, 0)
+
+[node name="Ability_Group_List_Item_04" parent="Commands/Ability_List_Panel/List" unique_id=1714396330 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-163.37135, 0)
+
+[node name="First_Highlight_Effect" type="Node" parent="Commands/Ability_List_Panel/List/Ability_Group_List_Item_04" unique_id=69603917]
+script = ExtResource("5_d7na3")
+
+[node name="Ability_Group_List_Item_05" parent="Commands/Ability_List_Panel/List" unique_id=1971352857 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-193.12471, 0)
+
+[node name="Ability_Group_List_Item_06" parent="Commands/Ability_List_Panel/List" unique_id=1692516211 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-208.59119, 0)
+
+[node name="Ability_Group_List_Item_07" parent="Commands/Ability_List_Panel/List" unique_id=1319178338 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-221.97888, 0)
+
+[node name="Ability_Group_List_Item_08" parent="Commands/Ability_List_Panel/List" unique_id=1864771210 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-221.97888, 0)
+
+[node name="Ability_Group_List_Item_09" parent="Commands/Ability_List_Panel/List" unique_id=537898877 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-208.59119, 0)
+
+[node name="Ability_Group_List_Item_11" parent="Commands/Ability_List_Panel/List" unique_id=1613688086 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-193.12471, 0)
+
+[node name="Ability_Group_List_Item_13" parent="Commands/Ability_List_Panel/List" unique_id=1608597371 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-163.37135, 0)
+
+[node name="Ability_Group_List_Item_14" parent="Commands/Ability_List_Panel/List" unique_id=494360854 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-124.94498, 0)
+
+[node name="Ability_Group_List_Item_15" parent="Commands/Ability_List_Panel/List" unique_id=1443822787 instance=ExtResource("3_astpc")]
+layout_mode = 2
+offset_transform_position = Vector2(-75.999565, 0)
+
+[node name="Tooltip_Container" type="PanelContainer" parent="." unique_id=947432249]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_astpc")
+
+[node name="Label" type="Label" parent="Tooltip_Container" unique_id=1208553160]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.26666668, 0.015686275, 0.019607844, 1)
+theme_override_font_sizes/font_size = 26
+text = "Use level 1 black magic."
+vertical_alignment = 1
+autowrap_mode = 2

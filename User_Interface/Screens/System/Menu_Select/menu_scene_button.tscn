@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://2qoux2t3mcbw"]
+
+[ext_resource type="Texture2D" uid="uid://cosen7h5mb5qr" path="res://icon.svg" id="1_kelsq"]
+
+[node name="Menu Scene Button" type="Button" unique_id=1965440316]
+custom_minimum_size = Vector2(160, 180)
+custom_maximum_size = Vector2(160, 180)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contents" type="VBoxContainer" parent="." unique_id=704137605]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Contents" unique_id=460047332]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_kelsq")
+
+[node name="Label" type="Label" parent="Contents" unique_id=1999661891]
+layout_mode = 2
+text = "Level Name"
+horizontal_alignment = 1
